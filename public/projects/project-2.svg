@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <rect width="640" height="400" fill="#0a0f0c"/>
+  <rect x="40" y="40" width="560" height="320" rx="8" fill="#07140c" stroke="#0a6b32"/>
+  <rect x="60" y="70" width="200" height="260" rx="6" fill="#0a1a10" stroke="#00FF55" opacity="0.4"/>
+  <rect x="80" y="100" width="160" height="100" rx="4" fill="#12301c"/>
+  <rect x="80" y="220" width="100" height="10" rx="2" fill="#00FF55" opacity="0.6"/>
+  <rect x="80" y="240" width="140" height="8" rx="2" fill="#71917B" opacity="0.4"/>
+  <rect x="280" y="70" width="300" height="80" rx="6" fill="#0a1a10" stroke="#00D9FF" opacity="0.35"/>
+  <rect x="280" y="170" width="140" height="160" rx="6" fill="#0a1a10" stroke="#0a6b32"/>
+  <rect x="440" y="170" width="140" height="160" rx="6" fill="#0a1a10" stroke="#0a6b32"/>
+  <text x="320" y="370" text-anchor="middle" fill="#00FF55" font-family="monospace" font-size="12" opacity="0.6">REAL ESTATE</text>
+</svg>

@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <rect width="640" height="400" fill="#0a0f0c"/>
+  <rect x="40" y="40" width="560" height="320" rx="8" fill="#07140c" stroke="#0a6b32"/>
+  <rect x="60" y="70" width="100" height="260" rx="4" fill="#050806" stroke="#0a6b32"/>
+  <rect x="75" y="90" width="70" height="8" rx="2" fill="#00FF55" opacity="0.5"/>
+  <rect x="75" y="110" width="70" height="8" rx="2" fill="#71917B" opacity="0.4"/>
+  <rect x="75" y="130" width="70" height="8" rx="2" fill="#71917B" opacity="0.4"/>
+  <rect x="180" y="70" width="200" height="120" rx="6" fill="#0a1a10" stroke="#00D9FF" opacity="0.4"/>
+  <polyline points="200,160 240,120 280,140 320,90 360,110" stroke="#00FF55" stroke-width="2" fill="none"/>
+  <rect x="400" y="70" width="180" height="120" rx="6" fill="#0a1a10" stroke="#00FF55" opacity="0.35"/>
+  <rect x="180" y="210" width="400" height="120" rx="6" fill="#0a1a10" stroke="#0a6b32"/>
+  <rect x="200" y="280" width="40" height="30" fill="#00FF55" opacity="0.4"/>
+  <rect x="260" y="250" width="40" height="60" fill="#00D9FF" opacity="0.35"/>
+  <rect x="320" y="230" width="40" height="80" fill="#00FF55" opacity="0.5"/>
+  <rect x="380" y="260" width="40" height="50" fill="#00D9FF" opacity="0.3"/>
+  <text x="320" y="370" text-anchor="middle" fill="#00FF55" font-family="monospace" font-size="12" opacity="0.6">DASHBOARD</text>
+</svg>

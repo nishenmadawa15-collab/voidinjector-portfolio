@@ -1,0 +1,33 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies & build
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Large / duplicate local archives (not needed on GitHub)
+Nishen_Madava_Portfolio_v2.0.zip
+Nishen_extract/
+imageweb.png
+
+# Root CV is copied into public/resume — avoid duplicate if you keep both
+# (public/resume/Nishen_Madava_CV.pdf IS tracked)

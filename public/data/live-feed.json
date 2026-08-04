@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "lastUpdated": "2026-08-05T02:50:00.000Z",
+  "source": "manual-sync",
+  "linkedinProfile": {
+    "name": "Nishen Madava",
+    "headline": "Cyber Security Undergraduate | Ethical Hacker | Penetration Tester | CTF Competitor",
+    "location": "Matara, Southern Province, Sri Lanka",
+    "education": "BSc (Hons) Cyber Security — Sri Lanka Technological Campus (SLTC)",
+    "org": "Publicity & PR Director · ISACA Student Group — SLTC",
+    "profileUrl": "https://www.linkedin.com/in/nishen-madava/",
+    "followers": "2500+"
+  },
+  "ctfEvents": [
+    {
+      "title": "ANIMUS 1.0 — University of Ruhuna",
+      "description": "Team N4X secured 5th place nationally. Domains: Web, Digital Forensics, Crypto, Reverse Engineering, OSINT, Network Security. Organized by CSSC + VULNHAT.",
+      "tags": ["Web", "Forensics", "Crypto", "RE", "OSINT"],
+      "date": "2025",
+      "place": "5th Place",
+      "team": "Team N4X",
+      "linkedinUrl": "https://lnkd.in/p/gtiAixCn"
+    },
+    {
+      "title": "IIT CTF Challenge",
+      "description": "National CTF track — strategic problem-solving across offensive security domains. Shared results and lessons on LinkedIn.",
+      "tags": ["CTF", "PenTest", "CyberSecurity"],
+      "date": "2025",
+      "linkedinUrl": "https://lnkd.in/p/g2d3MGKv"
+    },
+    {
+      "title": "CyberQuest CTF (NSBM)",
+      "description": "Advanced cybersecurity challenges from vulnerability assessment to exploit development — collaborative problem-solving and professional growth.",
+      "tags": ["CyberQuest", "CTF", "EthicalHacking"],
+      "date": "2025",
+      "linkedinUrl": "https://www.linkedin.com/posts/nishen-madava_cyberquest-ctf-cybersecurity-activity-7445695145846599680-5Ifz"
+    },
+    {
+      "title": "SLTC Internal CTF",
+      "description": "Comprehensive security challenges across multiple domains at SLTC.",
+      "tags": ["Mixed", "Advanced"],
+      "date": "2025"
+    }
+  ],
+  "linkedinCtfPosts": [
+    {
+      "id": 1,
+      "title": "ANIMUS 1.0 — 5th Place · University of Ruhuna",
+      "excerpt": "Proud to share that Team N4X secured 5th Place at ANIMUS 1.0, a national CTF by CSSC (University of Ruhuna) with VULNHAT. Challenged across Web Security, Digital Forensics, Cryptography, Reverse Engineering, OSINT, and Network Security. Teammates: Nishen Madava, Tharusha Pieris, Kalindu Himasara Weerakkody, Sanura Dilmith.",
+      "date": "Recent",
+      "tags": ["ANIMUS10", "CTF", "TeamN4X", "UniversityOfRuhuna"],
+      "url": "https://lnkd.in/p/gtiAixCn",
+      "reactions": "39+"
+    },
+    {
+      "id": 2,
+      "title": "IIT CTF Challenge",
+      "excerpt": "Competed in the IIT CTF Challenge — strategic thinking and hands-on offensive security problem-solving. Full update on LinkedIn.",
+      "date": "2025",
+      "tags": ["CTF", "IIT", "CyberSecurity"],
+      "url": "https://lnkd.in/p/g2d3MGKv"
+    },
+    {
+      "id": 3,
+      "title": "CyberQuest CTF — NSBM",
+      "excerpt": "Delighted to have participated in CyberQuest CTF! Advanced cybersecurity challenges, strategic thinking, and collaborative problem-solving — from vulnerability assessment to exploit development. Strengthened technical expertise and passion for cybersecurity innovation.",
+      "date": "~4 mo",
+      "tags": ["CyberQuest", "CTF", "EthicalHacking", "Innovation"],
+      "url": "https://www.linkedin.com/posts/nishen-madava_cyberquest-ctf-cybersecurity-activity-7445695145846599680-5Ifz",
+      "reactions": "63"
+    }
+  ]
+}

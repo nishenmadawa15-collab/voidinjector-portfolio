@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nikto">
+  <rect width="64" height="64" rx="10" fill="#0d1117"/>
+  <path fill="none" stroke="#ff3366" stroke-width="3" d="M14 14h36v36H14z"/>
+  <path fill="none" stroke="#00FF55" stroke-width="3.5" stroke-linejoin="round" d="M20 42 L32 16 L44 42"/>
+  <path stroke="#00D9FF" stroke-width="2.5" d="M24 34h16"/>
+  <text x="32" y="54" text-anchor="middle" fill="#ff3366" font-size="8" font-family="monospace" font-weight="700">NIKTO</text>
+</svg>
