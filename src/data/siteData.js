@@ -1,398 +1,281 @@
 /**
- * ============================================================
- * NISHEN MADAVA — Portfolio data (from Portfolio v2.0)
- * Edit this file to update content site-wide.
- * ============================================================
+ * Single content source for the portfolio.
+ * Everything rendered on the site comes from this file.
+ * No phone number or home address is published (privacy decision).
  */
 
-export const personalInfo = {
-  displayName: 'Nishen Madava',
-  shortName: 'Nishen',
-  brand: 'NISHEN',
-  brandLeet: 'VOIDINJECTOR',
-  title: 'CYBERSECURITY Undergraduate | Ethical Hacker | Penetration Tester',
-  heroTagline:
-    'CYBER SECURITY UNDERGRADUATE | ETHICAL HACKER | PENETRATION TESTER | CTF COMPETITOR',
-  heroHeadline: "WELCOME TO VOIDINJECTOR'S ARCHIVE",
-  briefIntro:
-    'Cyber Security Undergraduate at SLTC — ethical hacking, pentesting, CTF, and community leadership.',
-  bio: `I am a dedicated Cyber Security Undergraduate at Sri Lanka Technological Campus, passionate about protecting digital infrastructure and identifying vulnerabilities in systems. With hands-on experience in ethical hacking, penetration testing, and digital forensics, I actively participate in CTF competitions and contribute to the cybersecurity community.
-
-As the Publicity & PR Director of the ISACA Student Group at SLTC, I lead initiatives to raise cyber awareness and organize technical workshops. My goal is to become a professional SOC Analyst or Penetration Tester, helping organizations build robust security defenses.`,
-  role: 'Cyber Security Undergraduate',
-  job: 'Ethical Hacker / Aspiring Pentester',
-  education: 'BSc (Hons) Cyber Security — SLTC',
-  location: 'Matara, Sri Lanka',
-  email: 'Nishenmadawa15@gmail.com',
-  // Phone intentionally not published (privacy). Contact via email/LinkedIn.
-  phone: '',
-  // Profile photo from original portfolio
-  profileImage: '/profile/nishen.png',
-  resumeUrl: '/resume/Nishen_Madava_CV.pdf',
-  kernel: '4.0.0-voidinjector',
-  hostname: 'nishen@kali',
-  architecture: 'x86_64',
-  os: 'Kali Linux',
-}
-
-export const profileFields = [
-  { label: 'User', value: 'voidinjector' },
-  { label: 'Real Name', value: 'Nishen Madava' },
-  { label: 'Role', value: 'Ethical Hacker / Penetration Tester' },
-  { label: 'Job', value: 'Cyber Security Undergraduate' },
-  { label: 'OS', value: 'Kali Linux (Primary)' },
-  { label: 'Education', value: 'BSc (Hons) Cyber Security — SLTC' },
-  { label: 'Campus', value: 'Sri Lanka Technological Campus' },
-  { label: 'Location', value: 'Matara, Sri Lanka' },
-  { label: 'Email', value: 'Nishenmadawa15@gmail.com' },
-]
-
-export const certifications = [
-  { name: 'CCSEH', issuer: 'Certified Cyber Security Expert (H)', category: 'professional', image: '/certificates/ccseh.jpg' },
-  { name: 'Foundation in Cyber Security', issuer: 'Industry Certification', category: 'professional', image: '/certificates/foundation.png' },
-  { name: 'Ethical Hacking Workshop', issuer: 'Hands-on Training', category: 'professional', image: '/certificates/ethical-hacking.png' },
-  { name: 'Diploma in Cyber Security', issuer: 'SITC Campus', category: 'academic', image: '/certificates/diploma.jpg' },
-  { name: 'University of Ruhuna CTF', issuer: 'CTF Participation', category: 'academic', image: '/certificates/ruhuna.jpg' },
-  { name: 'ISACA Cyber Camp', issuer: 'University of Sri Jayewardenepura', category: 'academic', image: '/certificates/isaca.png' },
-  { name: 'Advanced Cybersecurity Course', issuer: 'Coursera', category: 'online', image: '/certificates/course2.png' },
-  { name: 'Penetration Testing Fundamentals', issuer: 'Online Platform', category: 'online', image: '/certificates/course3.png' },
-  { name: 'Network Security Essentials', issuer: 'Online Platform', category: 'online', image: '/certificates/course4.png' },
-]
-
-/** Short badge list for profile dashboard */
-export const certificationBadges = [
-  'CCSEH',
-  'Cyber Security Foundation',
-  'Ethical Hacking',
-  'Diploma — SITC',
-  'ISACA Cyber Camp',
-  'Pentest Fundamentals',
-]
-
-export const programmingLanguages = ['Python', 'C', 'C++']
-
-export const developerTools = ['GitHub', 'Linux CLI', 'VS Code', 'Burp Suite']
-
-export const operatingSystems = [
-  { name: 'Kali Linux', icon: 'kali', desc: 'Primary pentesting OS' },
-  { name: 'Ubuntu', icon: 'ubuntu', desc: 'Server & development' },
-  { name: 'Windows', icon: 'windows', desc: 'Windows Server & AD labs' },
-]
-
-export const profileTabs = ['Services', 'Security Audits', 'Network Defense', 'Mission Log']
-
-/** Tab content for WHO AM I modules */
-export const profileTabContent = {
-  Services: [
-    'Web application penetration testing',
-    'Network vulnerability assessment',
-    'Security awareness workshops',
-    'CTF coaching & team building',
-  ],
-  'Security Audits': [
-    'OWASP Top 10 review',
-    'Configuration hardening checks',
-    'Access control gap analysis',
-    'Remediation roadmap reports',
-  ],
-  'Network Defense': [
-    'Traffic analysis with Wireshark',
-    'Perimeter & firewall review',
-    'Intrusion detection patterns',
-    'Incident response playbooks',
-  ],
-  'Mission Log': [
-    'ISACA Student Group — PR Director',
-    'Active CTF competitor (VoidInjector)',
-    'TryHackMe / HackTheBox labs daily',
-    'Building sovereign defense skills',
-  ],
-}
-
-export const whoAmIExtras = {
-  threatLevel: 78,
-  clearance: 'STUDENT_OPS // GREEN',
-  focus: ['SOC Analyst track', 'Offensive security', 'Community leadership'],
-  languages: ['Sinhala', 'English'],
-  interests: ['CTF', 'Digital forensics', 'Secure coding', 'Cyber awareness'],
-  stats: [
-    // Derived from the data below so the numbers always match what is shown
-    { label: 'Projects', value: '04' },
-    { label: 'Certs', value: '09' },
-    { label: 'CTF Events', value: '04' },
-    { label: 'Best CTF', value: '5th' },
-  ],
-  aliases: ['voidinjector', 'NISHEN', 'IR5H4D-mode'],
-  availability: 'Open to internships & security collabs',
-}
-
-export const cyberExpertise = [
-  'Ethical Hacking',
-  'Penetration Testing',
-  'Digital Forensics',
-  'Incident Response',
-  'Risk Assessment',
-  'Web Security',
-  'Network Security',
-  'Security Auditing',
-  'Cryptography',
-  'Secure Coding',
-  'Data Protection',
-  'Server Hardening',
-]
-
-export const socialLinks = {
-  linkedin: 'https://www.linkedin.com/in/nishen-madava/',
-  github: 'https://github.com/nishenmadawa15-collab',
-  tryhackme: 'https://tryhackme.com/p/VoidInjector',
-  hackthebox: 'https://app.hackthebox.com/public/users/3219196',
-  email: 'mailto:Nishenmadawa15@gmail.com',
-  website: 'https://madhusankha.com/',
-  twitter: 'https://www.linkedin.com/in/nishen-madava/',
-  instagram: 'https://github.com/nishenmadawa15-collab',
-}
-
-/** Real LinkedIn profile snapshot (update posts URLs when you share new CTF posts) */
-export const linkedinProfile = {
+export const identity = {
   name: 'Nishen Madava',
-  headline: 'Cyber Security Undergraduate | Ethical Hacker | Penetration Tester | CTF Competitor',
-  location: 'Matara, Southern Province, Sri Lanka',
-  education: 'BSc (Hons) Cyber Security — Sri Lanka Technological Campus (SLTC)',
-  diploma: 'Diploma in Cyber Security — SITC Campus',
-  org: 'Publicity & PR Director · ISACA Student Group — SLTC',
-  profileUrl: 'https://www.linkedin.com/in/nishen-madava/',
-  openTo: 'Security internships, CTF teams, and cyber community collabs',
-  aliases: ['voidinjector', 'VoidInjector'],
+  handle: 'VOIDINJECTOR',
+  team: 'Team N4X',
+  headline: 'Cybersecurity Undergraduate',
+  subline: 'Aspiring Penetration Tester / SOC Analyst',
+  location: 'Sri Lanka',
+  email: 'nishenmadawa15@gmail.com',
+  languages: ['Sinhala', 'English'],
+  openTo: 'Cybersecurity internships (SOC, pentest, general security) and freelance web projects',
+  openToShort: 'cybersecurity internships (SOC / pentest / general security) and freelance web projects',
+  photo: { src: '/profile/nishen.webp', width: 800, height: 1000, alt: 'Portrait of Nishen Madava' },
+  resumeUrl: '/resume/Nishen_Madava_CV.pdf',
+  siteUrl: 'https://voidinjector-portfolio.netlify.app/',
+  summary:
+    'BSc (Hons) Cyber Security student at SLTC Research University. I spent six months as a Cybersecurity Intern at CodeZela, where I designed and built SOCWatch, a Wazuh SOC monitoring lab on AWS with real detection evidence. I compete in CTFs with Team N4X and build secure web applications on the side.',
 }
+
+export const links = [
+  { label: 'Email', value: identity.email, href: `mailto:${identity.email}`, external: false },
+  { label: 'LinkedIn', value: 'in/nishen-madava', href: 'https://www.linkedin.com/in/nishen-madava', external: true },
+  { label: 'GitHub', value: 'nishenmadawa15-collab', href: 'https://github.com/nishenmadawa15-collab', external: true },
+  { label: 'Hack The Box', value: 'VoidInjector', href: 'https://app.hackthebox.com/public/users/3219196', external: true },
+]
 
 export const navLinks = [
-  { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Skills' },
+  { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
-  { id: 'certifications', label: 'Certs' },
   { id: 'ctf', label: 'CTF' },
+  { id: 'certifications', label: 'Certifications' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'background', label: 'Background' },
   { id: 'contact', label: 'Contact' },
 ]
 
-/**
- * Skill tools — logos in public/skills/
- * Sources: Devicon (Python/C/C++/Linux/Ubuntu/Windows), Simple Icons (Wireshark/Burp/Nmap/OWASP),
- * Kali official dragon, branded Metasploit/Nessus/Nikto marks for offline reliability.
- */
-export const securityTools = [
-  { name: 'Wireshark', icon: 'wireshark', desc: 'Packet capture & protocol analysis', logo: '/skills/wireshark.svg' },
-  { name: 'Burp Suite', icon: 'burp', desc: 'Web app security testing', logo: '/skills/burpsuite.svg' },
-  { name: 'Metasploit', icon: 'metasploit', desc: 'Exploit development framework', logo: '/skills/metasploit.svg' },
-  { name: 'Nmap', icon: 'nmap', desc: 'Network discovery & scanning', logo: '/skills/nmap.svg' },
-  { name: 'Nessus', icon: 'nessus', desc: 'Vulnerability assessment', logo: '/skills/nessus.svg' },
-  { name: 'OWASP ZAP', icon: 'zap', desc: 'Open-source web scanner', logo: '/skills/owasp-zap.svg' },
-  { name: 'Linux CLI', icon: 'linux', desc: 'Shell & system operations', logo: '/skills/linux.svg' },
-  { name: 'Nikto', icon: 'nikto', desc: 'Web server vulnerability scan', logo: '/skills/nikto.svg' },
+/** Short, verifiable milestones shown as the hero "log". Newest first. */
+export const timeline = [
+  { when: '2026-10', text: 'DEADFACE CTF 2026 "Operation Kingmaker" — international, with VAMP_07' },
+  { when: '2026-09', text: 'Completed 6-month Cybersecurity Internship at CodeZela' },
+  { when: '2026-04', text: 'Started SOCWatch capstone — Wazuh SOC lab on AWS' },
+  { when: '2026-03', text: 'Google Cybersecurity Certificate courses (Coursera)' },
+  { when: '2025', text: 'ANIMUS 1.0 — 5th place nationally with Team N4X' },
+  { when: '2024', text: 'Began BSc (Hons) Cyber Security, SLTC Research University' },
 ]
 
-export const coreProgramming = [
-  { name: 'Python', icon: 'python', desc: 'Security automation & scripting', exp: '3 Years', logo: '/skills/python.svg' },
-  { name: 'C', icon: 'c', desc: 'System programming & research', exp: '2 Years', logo: '/skills/c.svg' },
-  { name: 'C++', icon: 'cpp', desc: 'Low-level & reverse engineering', exp: '2 Years', logo: '/skills/cpp.svg' },
-]
-
-export const webTech = [
-  { name: 'Kali Linux', icon: 'kali', desc: 'Primary pentesting OS', exp: 'Expert', logo: '/skills/kali.svg' },
-  { name: 'Ubuntu', icon: 'ubuntu', desc: 'Server & development env', exp: '3 Years', logo: '/skills/ubuntu.svg' },
-  { name: 'Windows', icon: 'windows', desc: 'Windows Server & AD labs', exp: 'Advanced', logo: '/skills/windows.svg' },
-]
-
-export const skillsIntro =
-  'I apply hands-on skills to secure digital systems — identifying and neutralizing threats through ethical hacking, penetration testing, digital forensics, and vulnerability analysis. Primary toolkit: Burp Suite, Nmap, Wireshark, Metasploit, Nessus, OWASP ZAP, and Kali Linux.'
-
-/** Project category filters */
-export const projectCategories = [
-  { id: 'all', label: 'All Ops' },
-  { id: 'network', label: 'Network' },
-  { id: 'web', label: 'Web Security' },
-  { id: 'automation', label: 'Automation' },
+export const experience = [
+  {
+    role: 'Cybersecurity Intern',
+    org: 'CodeZela',
+    period: 'Apr 2026 – Sep 2026',
+    duration: '6 months · completed',
+    summary:
+      'Capstone project SOCWatch: designed and built a Wazuh SOC monitoring lab on AWS, then proved it works with captured detection evidence.',
+    bullets: [
+      'Built the AWS environment from scratch: VPC, security groups, IAM, root MFA and budget alerts.',
+      'Deployed one Wazuh manager (server, indexer and dashboard, v4.14.7) and enrolled three endpoints: Ubuntu, Debian and Windows Server 2022, all agents active.',
+      'Proved four detection use cases end-to-end: centralised log ingestion, file integrity monitoring (create / modify / delete with hash diffs), vulnerability detection from the CVE feed, and authentication-failure / brute-force detection with single and correlated rules.',
+      'Captured a genuine internet-sourced brute-force attempt against the lab during evidence collection.',
+      'Produced the full project report, runbook, presentation deck and weekly evidence log.',
+    ],
+    stack: ['Wazuh', 'AWS', 'Linux', 'Windows Server', 'SIEM'],
+    link: { label: 'SOCWatch on GitHub', href: 'https://github.com/nishenmadawa15-collab/SOCWatch' },
+  },
 ]
 
 export const projects = [
   {
-    id: 1,
-    title: 'SOCWatch — Wazuh SOC Monitoring Lab',
-    description:
-      'Cloud SOC lab on AWS: one Wazuh manager and three monitored endpoints (Ubuntu, Debian, Windows Server) proving log ingestion, file-integrity monitoring, vulnerability detection and brute-force detection with real captured evidence. CCA Cyber Security Internship project.',
-    tech: ['Wazuh', 'AWS', 'SIEM'],
-    category: 'network',
-    status: 'COMPLETE',
-    features: ['3 enrolled agents', 'FIM + CVE detection', 'Brute-force alert rules'],
-    image: '/projects/socwatch-agents.jpg',
-    githubUrl: 'https://github.com/nishenmadawa15-collab/SOCWatch',
-    demoUrl: 'https://github.com/nishenmadawa15-collab/SOCWatch',
+    id: 'socwatch',
+    name: 'SOCWatch',
+    kind: 'SOC monitoring lab',
+    status: 'Complete',
     featured: true,
+    summary:
+      'Wazuh SOC monitoring lab on AWS. One manager, three enrolled endpoints (Ubuntu, Debian, Windows Server 2022) and four detection use cases proven with real captured evidence: log ingestion, file integrity monitoring, CVE-based vulnerability detection and brute-force detection.',
+    highlights: ['3 agents active', 'FIM with hash diffs', 'CVE feed detection', 'Correlated brute-force rules'],
+    stack: ['Wazuh', 'AWS', 'Linux', 'Windows Server'],
+    image: {
+      src: '/projects/socwatch-agents.webp',
+      width: 1200,
+      height: 542,
+      alt: 'Wazuh dashboard showing three enrolled SOCWatch agents in active status',
+    },
+    links: [{ label: 'GitHub', href: 'https://github.com/nishenmadawa15-collab/SOCWatch' }],
   },
   {
-    id: 2,
-    title: 'FLAGVORA — CTF Platform',
-    description:
-      'A CTF platform built on the GZCTF open core with custom patches, security reviews and admin 2FA hardening. Private repository, in active development.',
-    tech: ['C#', 'GZCTF', 'Security review'],
-    category: 'web',
-    status: 'IN DEV',
-    features: ['Admin 2FA', 'Security hardening', 'Launch readiness'],
-    image: '/projects/project-2.jfif',
-    githubUrl: 'https://github.com/nishenmadawa15-collab',
-    demoUrl: 'https://github.com/nishenmadawa15-collab',
-    featured: true,
+    id: 'flagvora',
+    name: 'FLAGVORA',
+    kind: 'CTF platform',
+    status: 'In development',
+    privateRepo: true,
+    summary:
+      'Original CTF platform brand ("Find the flaw. Earn the flag.") built on the GZ::CTF open-source core (AGPLv3) with custom patches. Work so far covers security hardening, admin 2FA, an admin app and a deployment kit.',
+    highlights: ['Security hardening', 'Admin 2FA', 'Deployment kit'],
+    stack: ['C#', 'Python', 'GZ::CTF'],
+    links: [],
   },
   {
-    id: 3,
-    title: 'NexSkill — Internship Matching Platform',
-    description:
-      'SLTC team project: students are ranked against internships by an explainable weighted match score with a from-scratch TF-IDF skill-similarity layer (90% precision/recall in evaluation). Next.js + Supabase with Row-Level Security on every table.',
-    tech: ['Next.js', 'Supabase', 'TF-IDF'],
-    category: 'automation',
-    status: 'COMPLETE',
-    features: ['Explainable match score', 'Skill gap analyser', 'RLS on every table'],
-    image: '/projects/project-3.jfif',
-    githubUrl: 'https://github.com/nishenmadawa15-collab/nexskill',
-    demoUrl: 'https://github.com/nishenmadawa15-collab/nexskill',
-    featured: false,
+    id: 'nexskill',
+    name: 'NexSkill',
+    kind: 'Internship matching platform',
+    status: 'Complete',
+    summary:
+      'SLTC team project (CCS2360). Students are ranked against internships by an explainable weighted match score (skills 45%, GPA 20%, preferences 15%, year 10%, certs 10%) with three-tier skill similarity including from-scratch TF-IDF cosine similarity, a skill-gap analyser and Row-Level Security on every table. 90% precision and recall in evaluation.',
+    highlights: ['Explainable match score', 'From-scratch TF-IDF', 'RLS on every table'],
+    stack: ['Next.js', 'React', 'Supabase', 'PostgreSQL', 'Tailwind'],
+    links: [{ label: 'GitHub', href: 'https://github.com/nishenmadawa15-collab/nexskill' }],
   },
   {
-    id: 4,
-    title: 'BG Remover — Client-side Tool',
-    description:
-      'Browser-based background remover for solid-colour backgrounds. Images are processed on an HTML canvas and never leave the device.',
-    tech: ['React', 'Canvas API', 'Privacy'],
-    category: 'web',
-    status: 'LIVE',
-    features: ['No uploads to a server', 'Adjustable sensitivity', 'Transparent PNG export'],
-    image: '/projects/project-4.jfif',
-    githubUrl: 'https://github.com/nishenmadawa15-collab/bg-remover',
-    demoUrl: 'https://nishenmadawa15-collab.github.io/bg-remover/',
-    featured: false,
+    id: 'nursery',
+    name: 'Southern Plant Nursery',
+    kind: 'Secure e-commerce platform',
+    status: 'In development',
+    privateRepo: true,
+    summary:
+      'Full-stack store with WhatsApp-first ordering and separate customer, admin and careers portals. Security work includes OTP login, role-separated portals, time-limited file links, Zod input validation, Prisma parameterised queries and migration preflight checks.',
+    highlights: ['OTP login', 'Role-separated portals', 'Zod + Prisma validation'],
+    stack: ['Next.js', 'TypeScript', 'Prisma', 'MySQL', 'Tailwind'],
+    links: [],
+  },
+  {
+    id: 'extensions',
+    name: 'Privacy-first Chrome extensions',
+    kind: 'Four browser extensions',
+    status: 'Complete',
+    summary:
+      'Gramo (grammar and spelling helper), YouTube Timestamp Saver, AdBlock Pro and Window Resizer. Zero personal data collected, no tracking, settings stored locally and a public privacy policy for each.',
+    highlights: ['No data collection', 'Local-only settings', 'Public privacy policies'],
+    stack: ['JavaScript', 'Chrome Extensions API'],
+    links: [],
+  },
+  {
+    id: 'bg-remover',
+    name: 'BG Remover',
+    kind: 'Client-side image tool',
+    status: 'Live',
+    summary:
+      'Background remover for solid-colour backgrounds that runs entirely in the browser: canvas-based colour keying, adjustable sensitivity and transparent PNG export. Images never leave the device.',
+    highlights: ['Runs fully client-side', 'Adjustable sensitivity', 'Transparent PNG export'],
+    stack: ['JavaScript', 'Canvas API'],
+    links: [
+      { label: 'Live', href: 'https://nishenmadawa15-collab.github.io/bg-remover/' },
+      { label: 'GitHub', href: 'https://github.com/nishenmadawa15-collab/bg-remover' },
+    ],
+  },
+  {
+    id: 'portfolio',
+    name: 'VOIDINJECTOR portfolio',
+    kind: 'This website',
+    status: 'Live',
+    summary:
+      'Static single-page portfolio with a single content file, strict Content-Security-Policy and security headers, no tracking, and optimised images. Deployed from the main branch to Netlify.',
+    highlights: ['Strict CSP', 'No tracking', 'Static build'],
+    stack: ['React', 'Vite', 'Tailwind CSS', 'Netlify'],
+    links: [{ label: 'GitHub', href: 'https://github.com/nishenmadawa15-collab/voidinjector-portfolio' }],
   },
 ]
 
-export const ctfEvents = [
-  {
-    title: 'ANIMUS 1.0 — University of Ruhuna',
-    description:
-      'Team N4X secured 5th place nationally. Domains: Web, Digital Forensics, Crypto, Reverse Engineering, OSINT, Network Security. Organized by CSSC + VULNHAT.',
-    tags: ['Web', 'Forensics', 'Crypto', 'RE', 'OSINT'],
-    date: '2025',
-    place: '5th Place',
-    team: 'Team N4X',
-    linkedinUrl: 'https://lnkd.in/p/gtiAixCn',
+export const ctf = {
+  team: 'Team N4X (SLTC)',
+  headline: {
+    event: 'ANIMUS 1.0',
+    result: '5th place nationally',
+    host: 'University of Ruhuna · CSSC + VULNHAT',
+    year: '2025',
+    domains: ['Web', 'Digital Forensics', 'Crypto', 'Reverse Engineering', 'OSINT', 'Network Security'],
+    image: {
+      src: '/ctf/animus-certificate.webp',
+      width: 1000,
+      height: 1333,
+      alt: 'ANIMUS 1.0 certificate of participation awarded to Nishen Madava, Team N4X',
+    },
   },
-  {
-    title: 'IIT CTF Challenge',
-    description:
-      'National CTF track — strategic problem-solving across offensive security domains. Shared results and lessons on LinkedIn.',
-    tags: ['CTF', 'PenTest', 'CyberSecurity'],
-    date: '2025',
-    linkedinUrl: 'https://lnkd.in/p/g2d3MGKv',
-  },
-  {
-    title: 'CyberQuest CTF (NSBM)',
-    description:
-      'Advanced cybersecurity challenges from vulnerability assessment to exploit development — collaborative problem-solving and professional growth.',
-    tags: ['CyberQuest', 'CTF', 'EthicalHacking'],
-    date: '2025',
-    linkedinUrl:
-      'https://www.linkedin.com/posts/nishen-madava_cyberquest-ctf-cybersecurity-activity-7445695145846599680-5Ifz',
-  },
-  {
-    title: 'SLTC Internal CTF',
-    description: 'Comprehensive security challenges across multiple domains at SLTC.',
-    tags: ['Mixed', 'Advanced'],
-    date: '2025',
-  },
-]
-
-/**
- * Real LinkedIn CTF posts (Nishen Madava)
- * Ruhuna ANIMUS · IIT · CyberQuest NSBM
- */
-export const linkedinCtfPosts = [
-  {
-    id: 1,
-    title: 'ANIMUS 1.0 — 5th Place · University of Ruhuna',
-    excerpt:
-      'Proud to share that Team N4X secured 5th Place at ANIMUS 1.0, a national CTF by CSSC (University of Ruhuna) with VULNHAT. Challenged across Web Security, Digital Forensics, Cryptography, Reverse Engineering, OSINT, and Network Security. Teammates: Nishen Madava, Tharusha Pieris, Kalindu Himasara Weerakkody, Sanura Dilmith.',
-    date: 'Recent',
-    tags: ['ANIMUS10', 'CTF', 'TeamN4X', 'UniversityOfRuhuna'],
-    url: 'https://lnkd.in/p/gtiAixCn',
-    reactions: '39+',
-  },
-  {
-    id: 2,
-    title: 'IIT CTF Challenge',
-    excerpt:
-      'Competed in the IIT CTF Challenge — strategic thinking and hands-on offensive security problem-solving. Full update on LinkedIn.',
-    date: '2025',
-    tags: ['CTF', 'IIT', 'CyberSecurity'],
-    url: 'https://lnkd.in/p/g2d3MGKv',
-  },
-  {
-    id: 3,
-    title: 'CyberQuest CTF — NSBM',
-    excerpt:
-      'Delighted to have participated in CyberQuest CTF! Advanced cybersecurity challenges, strategic thinking, and collaborative problem-solving — from vulnerability assessment to exploit development. Strengthened technical expertise and passion for cybersecurity innovation.',
-    date: '~4 mo',
-    tags: ['CyberQuest', 'CTF', 'EthicalHacking', 'Innovation'],
-    url: 'https://www.linkedin.com/posts/nishen-madava_cyberquest-ctf-cybersecurity-activity-7445695145846599680-5Ifz',
-    reactions: '63',
-  },
-]
-
-export const ctfPlatforms = [
-  {
-    name: 'LinkedIn',
-    handle: 'nishen-madava',
-    url: 'https://www.linkedin.com/in/nishen-madava/',
-    kind: 'linkedin',
-  },
-  {
-    name: 'TryHackMe',
-    handle: '@VoidInjector',
-    url: 'https://tryhackme.com/p/VoidInjector',
-    kind: 'thm',
-  },
-  {
-    name: 'HackTheBox',
-    handle: 'User #3219196',
-    url: 'https://app.hackthebox.com/public/users/3219196',
-    kind: 'htb',
-  },
-]
-
-/** Terminal bot help text */
-export const ctfBotCommands = {
-  help: 'Commands: help | whoami | profile | flags | linkedin | posts | thm | htb | access | scan | clear',
-  whoami:
-    'Nishen Madava · voidinjector · Team N4X · Cyber Security Undergraduate @ SLTC · Ethical Hacker · CTF Competitor',
-  profile:
-    'LinkedIn: https://www.linkedin.com/in/nishen-madava/ | Matara, Sri Lanka | BSc (Hons) Cyber Security — SLTC | ISACA PR Director | 2,500+ followers',
-  flags: 'Listing CTF flags from local archive…',
-  linkedin: 'Profile lock opened → https://www.linkedin.com/in/nishen-madava/',
-  posts: 'LinkedIn CTF posts: ANIMUS Ruhuna (5th) · IIT CTF · CyberQuest NSBM',
-  thm: 'TryHackMe handle: @VoidInjector',
-  htb: 'HackTheBox user: #3219196',
-  scan: 'Scan complete · ANIMUS 5th · CyberQuest · IIT · LinkedIn posts ONLINE',
-  clear: '__CLEAR__',
-}
-
-export const leadership = {
-  role: 'Publicity & PR Director',
-  org: 'ISACA Student Group — SLTC',
-  period: '2026 – 2027',
-  description:
-    'Leading publicity and public relations for the ISACA Student Group, organizing cybersecurity awareness events, managing social media, and coordinating with industry professionals.',
-  achievements: [
-    'Organized 5+ cybersecurity workshops',
-    'Increased student engagement by 60%',
-    'Coordinated with industry experts',
+  events: [
+    {
+      event: 'DEADFACE CTF 2026 — "Operation Kingmaker"',
+      host: 'Cyber Hacktics',
+      when: 'Oct 2026',
+      note: 'International CTF, competitor badge. Played as VoidInjector with teammate VAMP_07 among hundreds of teams worldwide.',
+      scope: 'International',
+    },
+    { event: 'IIT CTF Challenge', host: 'IIT', when: '2025', scope: 'National' },
+    { event: 'CyberQuest CTF', host: 'NSBM Green University', when: '2025', scope: 'National' },
+    {
+      event: 'CYPHER 4.0',
+      host: 'IEEE Student Branch, Kotelawala Defence University',
+      when: '',
+      note: 'First CTF.',
+      scope: 'National',
+    },
   ],
+  practice: 'Ongoing practice on Hack The Box and TryHackMe labs.',
 }
 
-export const contactSubtitle =
-  "Let's discuss cybersecurity opportunities, CTF collabs, or security consulting."
+export const certifications = [
+  {
+    group: 'Google Cybersecurity Certificate (Coursera) · Mar 2026',
+    items: [
+      { name: 'Play It Safe: Manage Security Risks', image: '/certificates/google-play-it-safe.webp', w: 922, h: 715 },
+      { name: 'Connect and Protect: Networks and Network Security', image: '/certificates/google-connect-protect.webp', w: 1000, h: 772 },
+      { name: 'Tools of the Trade: Linux and SQL', image: '/certificates/google-tools-of-the-trade.webp', w: 1000, h: 776 },
+      { name: 'Assets, Threats, and Vulnerabilities', image: '/certificates/google-assets-threats.webp', w: 1000, h: 775 },
+    ],
+  },
+  {
+    group: 'Programmes, workshops and events',
+    cols: 3,
+    items: [
+      { name: 'E|Hacking Workshop V02', issuer: 'Hands-on ethical hacking workshop', image: '/certificates/ehacking-workshop.webp', w: 970, h: 685 },
+      { name: 'ISACA Cyber Camp', issuer: 'University of Sri Jayewardenepura', image: '/certificates/isaca-cyber-camp.webp', w: 1000, h: 670 },
+      { name: 'DEADFACE CTF 2026 Competitor', issuer: 'Cyber Hacktics · Oct 2026' },
+      { name: 'Certificate in Cyber Security & Ethical Hacking (C|CSEH)' },
+      { name: 'Foundation in Cyber Security', issuer: 'CICRA Campus' },
+      { name: 'Diploma in Cyber Security', issuer: 'SITC Campus' },
+    ],
+  },
+]
+
+export const skills = [
+  {
+    group: 'Security',
+    items: [
+      'SOC monitoring & SIEM (Wazuh)',
+      'Log analysis',
+      'File integrity monitoring',
+      'Vulnerability assessment',
+      'Web application security (OWASP Top 10, SQLi, XSS)',
+      'Penetration testing methodology',
+      'Network traffic analysis',
+      'Digital forensics',
+      'OSINT',
+      'Risk assessment',
+      'Secure coding',
+    ],
+  },
+  {
+    group: 'Tools',
+    items: ['Kali Linux', 'Burp Suite', 'Nmap', 'Wireshark', 'Metasploit', 'Nessus', 'OWASP ZAP', 'Wazuh'],
+  },
+  {
+    group: 'Cloud & systems',
+    items: ['AWS (EC2, VPC, IAM, security groups)', 'Linux (Ubuntu, Debian)', 'Windows Server'],
+  },
+  {
+    group: 'Programming & web',
+    items: ['Python', 'C/C++', 'JavaScript', 'TypeScript', 'SQL', 'React', 'Next.js', 'Node.js', 'Tailwind CSS', 'Supabase', 'Prisma', 'MySQL'],
+  },
+  {
+    group: 'Working style',
+    items: ['Analytical thinking', 'Problem solving', 'Teamwork', 'Communication', 'Leadership'],
+  },
+]
+
+export const leadership = [
+  {
+    role: 'Publicity & PR Director',
+    org: 'ISACA Student Group, SLTC',
+    note: 'Organises cyber-awareness initiatives, CTF challenges and technical workshops.',
+  },
+  {
+    role: 'Member',
+    org: 'SLTC LEO Club',
+    note: 'Community service and leadership.',
+  },
+]
+
+export const education = [
+  {
+    degree: 'BSc (Hons) Cyber Security',
+    school: 'SLTC Research University (Sri Lanka Technological Campus)',
+    period: '2024 – 2028 (expected)',
+    note: 'Coursework: Network Security, Ethical Hacking, Cryptography, Cyber Forensics, Security Policies & Risk Management.',
+  },
+  { degree: 'Foundation in Cyber Security', school: 'CICRA Campus', period: '2023 – 2024' },
+  { degree: 'Diploma in Cyber Security', school: 'SITC Campus', period: '' },
+]
