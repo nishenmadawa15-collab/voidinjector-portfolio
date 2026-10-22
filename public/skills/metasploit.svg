@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Metasploit">
-  <rect width="64" height="64" rx="10" fill="#1a1a1a"/>
-  <path fill="#00FF55" d="M18 44V18h6.5l9.5 14.2L43.5 18H50v26h-6.2V28.4L34.5 42.8h-5L20.2 28.2V44H18z"/>
-  <circle cx="32" cy="10" r="3" fill="#00D9FF"/>
-</svg>

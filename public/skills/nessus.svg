@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nessus / Tenable">
-  <rect width="64" height="64" rx="10" fill="#0B1F33"/>
-  <path fill="#00A4EF" d="M32 8L52 19.5v23L32 54 12 42.5v-23L32 8z"/>
-  <path fill="#fff" d="M32 20c-5.5 0-9 3.2-9 8.2 0 4.2 2.6 6.8 6.8 7.6v2.4h4.4v-2.4c4.2-.8 6.8-3.4 6.8-7.6 0-5-3.5-8.2-9-8.2zm0 4c2.4 0 4 1.4 4 3.6S34.4 35 32 35s-4-1.2-4-3.4 1.6-3.6 4-3.6z"/>
-  <text x="32" y="58" text-anchor="middle" fill="#00A4EF" font-size="7" font-family="Arial,sans-serif" font-weight="700">NESSUS</text>
-</svg>
