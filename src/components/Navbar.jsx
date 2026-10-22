@@ -1,126 +1,117 @@
-import { useEffect, useState } from 'react'
-import { Hexagon, Menu, X } from 'lucide-react'
-import Reveal from './Reveal'
-
-const links = [
-  { id: 'projects', label: 'Projects', badge: '4' },
-  { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'contact', label: 'Contact' },
-]
+import { useEffect, useRef, useState } from 'react'
+import { Menu, X } from 'lucide-react'
+import { identity, navLinks } from '../data/siteData'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const panelRef = useRef(null)
+  const buttonRef = useRef(null)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16)
+    const onScroll = () => setScrolled(window.scrollY > 8)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : ''
+    if (!open) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        setOpen(false)
+        buttonRef.current?.focus()
+      }
+    }
+    const onResize = () => {
+      if (window.innerWidth >= 1024) setOpen(false)
+    }
+    document.addEventListener('keydown', onKey)
+    window.addEventListener('resize', onResize)
     return () => {
-      document.body.style.overflow = ''
+      document.removeEventListener('keydown', onKey)
+      window.removeEventListener('resize', onResize)
     }
   }, [open])
 
-  const go = (id) => {
-    setOpen(false)
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
-    <header className="fixed top-0 right-0 left-0 z-50">
-      <div
-        className={`border-b transition-all duration-300 ${
-          scrolled
-            ? 'border-[#00FF55]/25 bg-[#050806]/85 shadow-[0_0_30px_rgba(0,255,85,0.08)] backdrop-blur-md'
-            : 'border-[#00FF55]/15 bg-[#050806]/35 backdrop-blur-sm'
-        }`}
+    <header
+      className={`sticky top-0 z-40 border-b transition-colors ${
+        scrolled || open ? 'border-line bg-ink/90 backdrop-blur' : 'border-transparent bg-transparent'
+      }`}
+    >
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded focus:bg-mint focus:px-3 focus:py-2 focus:font-mono focus:text-sm focus:text-ink"
       >
-        <div className="flex items-center justify-between px-5 py-3 sm:px-8 md:px-12">
-          <Reveal delay={0}>
-            <a
-              href="#hero"
-              onClick={(e) => {
-                e.preventDefault()
-                window.scrollTo({ top: 0, behavior: 'smooth' })
-              }}
-              className="group flex items-center gap-2"
-            >
-              <span className="relative flex h-8 w-8 items-center justify-center">
-                <Hexagon
-                  size={26}
-                  strokeWidth={1.5}
-                  className="text-[#00FF55] drop-shadow-[0_0_10px_rgba(0,255,85,0.6)] transition-transform duration-300 group-hover:rotate-12"
-                />
-                <span className="absolute h-1.5 w-1.5 rounded-full bg-[#00FF55] shadow-[0_0_8px_#00FF55] pulse-dot" />
-              </span>
-              <span className="font-display text-sm font-semibold tracking-[0.18em] text-[#00FF55] sm:text-base">
-                voidinjector
-              </span>
-            </a>
-          </Reveal>
+        Skip to content
+      </a>
+      <nav aria-label="Primary" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#top" className="flex min-h-11 items-center gap-2 font-mono text-sm tracking-wide">
+          <span className="inline-block h-2 w-2 rounded-full bg-mint" aria-hidden="true" />
+          <span className="font-semibold text-text">{identity.handle}</span>
+          <span className="hidden text-muted sm:inline">/ {identity.name}</span>
+        </a>
 
-          <nav className="hidden items-center gap-8 md:flex lg:gap-10">
-            {links.map((link, i) => (
-              <Reveal key={link.id} delay={100 + i * 90}>
-                <button
-                  type="button"
-                  onClick={() => go(link.id)}
-                  className="nav-link-cyber text-sm text-[#E8FFF0]/85"
-                >
-                  {link.label}
-                  {link.badge && (
-                    <sup className="ml-0.5 font-mono text-[10px] text-[#00D9FF]">{link.badge}</sup>
-                  )}
-                </button>
-              </Reveal>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-2">
-            <Reveal delay={480}>
-              <button
-                type="button"
-                onClick={() => go('contact')}
-                className="btn-neon px-4 py-2 text-[0.65rem] sm:px-5 sm:text-xs"
+        <ul className="hidden items-center gap-1 lg:flex">
+          {navLinks.map((l) => (
+            <li key={l.id}>
+              <a
+                href={`#${l.id}`}
+                className="inline-flex min-h-11 items-center rounded px-3 font-mono text-sm text-text-dim transition-colors hover:text-mint"
               >
-                Hire Me
-              </button>
-            </Reveal>
-            <button
-              type="button"
-              className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#0a6b32] text-[#00FF55] md:hidden"
-              aria-label="Menu"
-              onClick={() => setOpen((v) => !v)}
-            >
-              {open ? <X size={18} /> : <Menu size={18} />}
-            </button>
-          </div>
-        </div>
-      </div>
+                {l.label}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a href={identity.resumeUrl} className="btn btn-ghost ml-2 py-1.5 text-xs" download>
+              CV
+            </a>
+          </li>
+        </ul>
 
-      {open && (
-        <div className="border-b border-[#00FF55]/20 bg-[#050806]/95 px-5 py-4 backdrop-blur-md md:hidden">
-          <ul className="flex flex-col gap-1">
-            {links.map((link) => (
-              <li key={link.id}>
-                <button
-                  type="button"
-                  onClick={() => go(link.id)}
-                  className="w-full rounded-lg px-3 py-3 text-left text-sm text-[#E8FFF0] transition-colors hover:bg-[#00FF55]/10 hover:text-[#00FF55]"
-                >
-                  {link.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+        <button
+          ref={buttonRef}
+          type="button"
+          className="inline-flex h-11 w-11 items-center justify-center rounded border border-line text-text lg:hidden"
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
+        </button>
+      </nav>
+
+      <div
+        id="mobile-nav"
+        ref={panelRef}
+        hidden={!open}
+        className="nav-panel border-t border-line bg-ink lg:hidden"
+      >
+        <ul className="mx-auto max-w-6xl px-4 py-3 sm:px-6">
+          {navLinks.map((l) => (
+            <li key={l.id}>
+              <a
+                href={`#${l.id}`}
+                onClick={() => setOpen(false)}
+                className="flex min-h-12 items-center justify-between border-b border-line/60 font-mono text-base text-text"
+              >
+                {l.label}
+                <span className="text-muted" aria-hidden="true">
+                  →
+                </span>
+              </a>
+            </li>
+          ))}
+          <li className="pt-3">
+            <a href={identity.resumeUrl} className="btn btn-primary w-full" download onClick={() => setOpen(false)}>
+              Download CV
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
   )
 }

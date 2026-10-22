@@ -1,58 +1,83 @@
-import MatrixBackground from './MatrixBackground'
-import GlitchText from './GlitchText'
-import { personalInfo } from '../data/siteData'
+import { ArrowDown, Download, Mail } from 'lucide-react'
+import { identity, timeline } from '../data/siteData'
 
 export default function Hero() {
-  const scrollTo = (id) => {
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
-    <section
-      id="hero"
-      className="relative flex min-h-[min(92vh,820px)] flex-col items-center justify-center overflow-hidden pt-24 pb-16 sm:min-h-[70vh] sm:pt-28"
-    >
-      <MatrixBackground opacity={0.14} density={0.9} speed={0.55} />
-      <div className="pointer-events-none absolute inset-0 glow-radial" aria-hidden="true" />
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#050806] to-transparent"
-        aria-hidden="true"
-      />
+    <section id="top" aria-label="Introduction" className="relative overflow-hidden">
+      <div className="grid-bg pointer-events-none absolute inset-0" aria-hidden="true" />
+      <div className="relative mx-auto grid max-w-6xl gap-12 px-4 pb-16 pt-10 sm:px-6 sm:pt-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:px-8 lg:pb-24 lg:pt-20">
+        <div className="flex flex-col justify-center lg:justify-start lg:pt-6">
+          <p className="label flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>{identity.handle}</span>
+            <span className="text-muted" aria-hidden="true">
+              //
+            </span>
+            <span className="text-muted">{identity.location}</span>
+          </p>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4 text-center">
-        <p className="mb-3 font-mono text-xs tracking-[0.25em] text-[#00D9FF]/80 sm:text-sm">
-          Hi, I&apos;m {personalInfo.displayName.toUpperCase()}
-        </p>
-        <GlitchText
-          text={personalInfo.heroHeadline}
-          className="max-w-[95vw] text-[clamp(1.25rem,5.2vw,3.5rem)] leading-[1.15] sm:leading-tight"
-        />
+          <h1 className="mt-5 font-display text-[2.6rem] font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
+            {identity.name}
+          </h1>
 
-        <p className="mt-5 max-w-3xl font-mono text-[0.6rem] font-normal uppercase tracking-[0.14em] text-[#71917B] sm:mt-6 sm:text-xs sm:tracking-[0.18em]">
-          {personalInfo.heroTagline}
-        </p>
+          <p className="mt-4 max-w-xl text-lg text-text-dim sm:text-xl">
+            {identity.headline}
+            <span className="text-muted"> · </span>
+            {identity.subline}
+          </p>
 
-        <p className="mt-4 max-w-xl font-body text-sm text-[#71917B]/90 sm:text-base">
-          Passionate about protecting digital assets, ethical hacking, penetration testing, and CTF
-          competitions.
-        </p>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">{identity.summary}</p>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-10 sm:gap-4">
-          <button
-            type="button"
-            onClick={() => scrollTo('about')}
-            className="btn-neon min-h-[44px] min-w-[140px]"
-          >
-            View Profile
-          </button>
-          <button
-            type="button"
-            onClick={() => scrollTo('projects')}
-            className="btn-neon min-h-[44px] min-w-[140px]"
-          >
-            Access Archive
-          </button>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a href="#projects" className="btn btn-primary">
+              View projects
+              <ArrowDown aria-hidden="true" />
+            </a>
+            <a href={identity.resumeUrl} className="btn btn-ghost" download>
+              <Download aria-hidden="true" />
+              Download CV
+            </a>
+            <a href="#contact" className="btn btn-ghost">
+              <Mail aria-hidden="true" />
+              Contact
+            </a>
+          </div>
+
+          <p className="mt-6 font-mono text-xs text-muted">
+            <span className="text-mint">status:</span> open to {identity.openToShort}
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-5 md:grid md:grid-cols-2 md:items-start lg:flex lg:flex-col lg:pt-4">
+          <figure className="card relative mx-auto w-full max-w-sm overflow-hidden md:mx-0 md:max-w-none">
+            <img
+              src={identity.photo.src}
+              width={identity.photo.width}
+              height={identity.photo.height}
+              alt={identity.photo.alt}
+              fetchPriority="high"
+              decoding="async"
+              className="aspect-[4/5] w-full object-cover object-top sm:aspect-square md:aspect-[4/5] lg:aspect-[5/4]"
+            />
+            <figcaption className="flex items-center justify-between gap-3 border-t border-line px-4 py-2.5 font-mono text-xs text-muted">
+              <span>{identity.team}</span>
+              <span className="text-mint">BSc (Hons) Cyber Security · SLTC</span>
+            </figcaption>
+          </figure>
+
+          <div className="card overflow-hidden" aria-label="Recent milestones">
+            <div className="flex items-center justify-between border-b border-line px-4 py-2.5">
+              <span className="label">capture.log</span>
+              <span className="font-mono text-xs text-muted">{timeline.length} entries</span>
+            </div>
+            <ol className="divide-y divide-line/70 font-mono text-[0.8rem] leading-snug">
+              {timeline.map((t, i) => (
+                <li key={t.when + t.text} className="flex gap-3 px-4 py-2.5">
+                  <span className="w-16 flex-none text-mint">{t.when}</span>
+                  <span className={`text-text-dim ${i === 0 ? 'cursor' : ''}`}>{t.text}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </div>
     </section>
