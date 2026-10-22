@@ -24,7 +24,8 @@ As the Publicity & PR Director of the ISACA Student Group at SLTC, I lead initia
   education: 'BSc (Hons) Cyber Security — SLTC',
   location: 'Matara, Sri Lanka',
   email: 'Nishenmadawa15@gmail.com',
-  phone: '+94 78 594 7479',
+  // Phone intentionally not published (privacy). Contact via email/LinkedIn.
+  phone: '',
   // Profile photo from original portfolio
   profileImage: '/profile/nishen.png',
   resumeUrl: '/resume/Nishen_Madava_CV.pdf',
@@ -44,7 +45,6 @@ export const profileFields = [
   { label: 'Campus', value: 'Sri Lanka Technological Campus' },
   { label: 'Location', value: 'Matara, Sri Lanka' },
   { label: 'Email', value: 'Nishenmadawa15@gmail.com' },
-  { label: 'Phone', value: '+94 78 594 7479' },
 ]
 
 export const certifications = [
@@ -76,7 +76,7 @@ export const developerTools = ['GitHub', 'Linux CLI', 'VS Code', 'Burp Suite']
 export const operatingSystems = [
   { name: 'Kali Linux', icon: 'kali', desc: 'Primary pentesting OS' },
   { name: 'Ubuntu', icon: 'ubuntu', desc: 'Server & development' },
-  { name: 'Windows', icon: 'windows', desc: 'Enterprise & AD pentest' },
+  { name: 'Windows', icon: 'windows', desc: 'Windows Server & AD labs' },
 ]
 
 export const profileTabs = ['Services', 'Security Audits', 'Network Defense', 'Mission Log']
@@ -116,10 +116,11 @@ export const whoAmIExtras = {
   languages: ['Sinhala', 'English'],
   interests: ['CTF', 'Digital forensics', 'Secure coding', 'Cyber awareness'],
   stats: [
-    { label: 'Projects', value: '15+' },
-    { label: 'Certs', value: '12+' },
-    { label: 'CTF Events', value: '08' },
-    { label: 'Years', value: '03' },
+    // Derived from the data below so the numbers always match what is shown
+    { label: 'Projects', value: '04' },
+    { label: 'Certs', value: '09' },
+    { label: 'CTF Events', value: '04' },
+    { label: 'Best CTF', value: '5th' },
   ],
   aliases: ['voidinjector', 'NISHEN', 'IR5H4D-mode'],
   availability: 'Open to internships & security collabs',
@@ -198,7 +199,7 @@ export const coreProgramming = [
 export const webTech = [
   { name: 'Kali Linux', icon: 'kali', desc: 'Primary pentesting OS', exp: 'Expert', logo: '/skills/kali.svg' },
   { name: 'Ubuntu', icon: 'ubuntu', desc: 'Server & development env', exp: '3 Years', logo: '/skills/ubuntu.svg' },
-  { name: 'Windows', icon: 'windows', desc: 'Enterprise & AD pentest', exp: 'Advanced', logo: '/skills/windows.svg' },
+  { name: 'Windows', icon: 'windows', desc: 'Windows Server & AD labs', exp: 'Advanced', logo: '/skills/windows.svg' },
 ]
 
 export const skillsIntro =
@@ -210,33 +211,32 @@ export const projectCategories = [
   { id: 'network', label: 'Network' },
   { id: 'web', label: 'Web Security' },
   { id: 'automation', label: 'Automation' },
-  { id: 'hardening', label: 'Hardening' },
 ]
 
 export const projects = [
   {
     id: 1,
-    title: 'Enterprise Network Security Assessment',
+    title: 'SOCWatch — Wazuh SOC Monitoring Lab',
     description:
-      'Comprehensive security assessment of enterprise network infrastructure, identifying vulnerabilities and implementing robust security measures.',
-    tech: ['Network Security', 'Wireshark', 'Nmap'],
+      'Cloud SOC lab on AWS: one Wazuh manager and three monitored endpoints (Ubuntu, Debian, Windows Server) proving log ingestion, file-integrity monitoring, vulnerability detection and brute-force detection with real captured evidence. CCA Cyber Security Internship project.',
+    tech: ['Wazuh', 'AWS', 'SIEM'],
     category: 'network',
-    status: 'DEPLOYED',
-    features: ['Network topology analysis', 'Vulnerability scanning', 'Security recommendations'],
-    image: '/projects/project-1.jfif',
-    githubUrl: 'https://github.com/nishenmadawa15-collab',
-    demoUrl: 'https://github.com/nishenmadawa15-collab',
+    status: 'COMPLETE',
+    features: ['3 enrolled agents', 'FIM + CVE detection', 'Brute-force alert rules'],
+    image: '/projects/socwatch-agents.jpg',
+    githubUrl: 'https://github.com/nishenmadawa15-collab/SOCWatch',
+    demoUrl: 'https://github.com/nishenmadawa15-collab/SOCWatch',
     featured: true,
   },
   {
     id: 2,
-    title: 'Web Application Penetration Testing',
+    title: 'FLAGVORA — CTF Platform',
     description:
-      'In-depth penetration testing of web applications following OWASP methodology, discovering critical vulnerabilities and providing remediation strategies.',
-    tech: ['Web Security', 'Burp Suite', 'OWASP'],
+      'A CTF platform built on the GZCTF open core with custom patches, security reviews and admin 2FA hardening. Private repository, in active development.',
+    tech: ['C#', 'GZCTF', 'Security review'],
     category: 'web',
-    status: 'ACTIVE',
-    features: ['SQL injection testing', 'XSS detection', 'Auth bypass analysis'],
+    status: 'IN DEV',
+    features: ['Admin 2FA', 'Security hardening', 'Launch readiness'],
     image: '/projects/project-2.jfif',
     githubUrl: 'https://github.com/nishenmadawa15-collab',
     demoUrl: 'https://github.com/nishenmadawa15-collab',
@@ -244,30 +244,30 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'Automated Vulnerability Assessment',
+    title: 'NexSkill — Internship Matching Platform',
     description:
-      'Custom Python-based vulnerability assessment framework that automates security scanning and generates detailed compliance reports.',
-    tech: ['Python', 'Automation', 'Scanning'],
+      'SLTC team project: students are ranked against internships by an explainable weighted match score with a from-scratch TF-IDF skill-similarity layer (90% precision/recall in evaluation). Next.js + Supabase with Row-Level Security on every table.',
+    tech: ['Next.js', 'Supabase', 'TF-IDF'],
     category: 'automation',
-    status: 'RESEARCH',
-    features: ['Automated scanning engine', 'Custom vuln database', 'Compliance reports'],
+    status: 'COMPLETE',
+    features: ['Explainable match score', 'Skill gap analyser', 'RLS on every table'],
     image: '/projects/project-3.jfif',
-    githubUrl: 'https://github.com/nishenmadawa15-collab',
-    demoUrl: 'https://github.com/nishenmadawa15-collab',
+    githubUrl: 'https://github.com/nishenmadawa15-collab/nexskill',
+    demoUrl: 'https://github.com/nishenmadawa15-collab/nexskill',
     featured: false,
   },
   {
     id: 4,
-    title: 'Linux Security Hardening',
+    title: 'BG Remover — Client-side Tool',
     description:
-      'Comprehensive Linux server hardening project implementing industry best practices for securing production environments.',
-    tech: ['Linux', 'Hardening', 'Bash'],
-    category: 'hardening',
-    status: 'SECURED',
-    features: ['Firewall config', 'SELinux setup', 'Intrusion detection'],
+      'Browser-based background remover for solid-colour backgrounds. Images are processed on an HTML canvas and never leave the device.',
+    tech: ['React', 'Canvas API', 'Privacy'],
+    category: 'web',
+    status: 'LIVE',
+    features: ['No uploads to a server', 'Adjustable sensitivity', 'Transparent PNG export'],
     image: '/projects/project-4.jfif',
-    githubUrl: 'https://github.com/nishenmadawa15-collab',
-    demoUrl: 'https://github.com/nishenmadawa15-collab',
+    githubUrl: 'https://github.com/nishenmadawa15-collab/bg-remover',
+    demoUrl: 'https://nishenmadawa15-collab.github.io/bg-remover/',
     featured: false,
   },
 ]
