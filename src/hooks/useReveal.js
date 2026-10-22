@@ -7,8 +7,8 @@ import { useEffect, useRef, useState } from 'react'
 export function useReveal(options = {}) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
-  const threshold = options.threshold ?? 0.1
-  const rootMargin = options.rootMargin ?? '0px 0px -10% 0px'
+  const threshold = options.threshold ?? 0
+  const rootMargin = options.rootMargin ?? '0px 0px -6% 0px'
 
   useEffect(() => {
     const el = ref.current
