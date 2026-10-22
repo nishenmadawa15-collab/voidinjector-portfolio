@@ -13,30 +13,14 @@ Portfolio site hardening checklist for **VOIDINJECTOR** (static React + Vite).
 | **Permissions** | Camera/mic/geo/payment/usb disabled |
 | **COOP / CORP** | `same-origin` |
 | **HSTS** | Enabled on preview + static `_headers` (HTTPS hosts) |
-| **XSS** | React JSX escaping; contact inputs sanitized; no `dangerouslySetInnerHTML` |
-| **Open redirects** | External URLs allowlisted (`isSafeExternalUrl`) |
-| **Contact spam** | Honeypot field + session rate limit (3 / 10 min) |
-| **Live feed** | `/data/live-feed.json` validated/sanitized before render |
+| **XSS** | React JSX escaping; all content is static from `src/data/siteData.js`; no `dangerouslySetInnerHTML` |
+| **External links** | `rel="noopener noreferrer"` on every external link |
+| **Contact** | No form or backend; contact is a `mailto:` link, so nothing is collected or stored |
+| **Third parties** | Google Fonts only; no analytics, tracking or embedded scripts |
 | **Source maps** | Disabled in production build |
-| **External links** | `rel="noopener noreferrer nofollow"` |
-
-## Live LinkedIn updates (no secrets)
-
-LinkedIn does **not** allow browser apps to pull posts without OAuth / paid APIs.
-This site uses a **same-origin** JSON feed:
-
-1. Edit `public/data/live-feed.json` (posts, CTF events, profile).
-2. Deploy / host that file — **no rebuild required** for content-only changes on most static hosts.
-3. The app re-fetches every **5 minutes** (`useLiveFeed`) with cache-busting.
-4. All URLs and text are sanitized client-side before display.
 
 ## Deploy notes
 
 - Prefer HTTPS only; keep `upgrade-insecure-requests` in CSP.
-- Copy `public/_headers` when using Netlify; map equivalent headers on Cloudflare/Vercel/nginx.
-- Never put API keys or tokens in client code or `live-feed.json`.
-
-## Contact form
-
-Frontend-only demo: submissions are validated/sanitized and rate-limited.
-Wire to a backend (Formspree, serverless, email API) **server-side** for production mail delivery — do not put mail API secrets in the browser.
+- `public/_headers` is applied by Netlify; map equivalent headers if the host changes.
+- There is no runtime data fetching, no contact backend and no secrets in the client bundle.

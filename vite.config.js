@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 /**
- * Security headers (VibeSec).
+ * Security headers for dev/preview; production headers live in public/_headers (Netlify).
  * Dev CSP allows Vite HMR; preview uses stricter production-like CSP.
  */
 function securityHeaders() {
@@ -24,13 +24,13 @@ function securityHeaders() {
     "script-src 'self'",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com data:",
-    "img-src 'self' data: blob: https:",
-    "media-src 'self' blob:",
+    "img-src 'self' data:",
+    "media-src 'none'",
     "connect-src 'self'",
-    "worker-src 'self' blob:",
+    "worker-src 'self'",
     "object-src 'none'",
     "base-uri 'self'",
-    "form-action 'self'",
+    "form-action 'self' mailto:",
     "frame-ancestors 'none'",
     "upgrade-insecure-requests",
   ].join('; ')
@@ -77,9 +77,7 @@ function securityHeaders() {
 export default defineConfig({
   plugins: [react(), tailwindcss(), securityHeaders()],
   build: {
-    // Do not ship source maps to production clients (reduces reverse-engineering surface)
     sourcemap: false,
-    // Drop console/debugger in production builds
     minify: true,
   },
 })
