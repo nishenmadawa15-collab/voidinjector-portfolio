@@ -295,6 +295,7 @@ export default function ProfileDashboard() {
                       {personalInfo.email}
                     </a>
                   </div>
+                  {personalInfo.phone && (
                   <div className="flex items-center gap-2">
                     <Phone size={12} className="text-[#00D9FF]" />
                     <a
@@ -304,6 +305,7 @@ export default function ProfileDashboard() {
                       {personalInfo.phone}
                     </a>
                   </div>
+                  )}
                 </div>
 
                 <div className="mt-4 flex flex-wrap items-center justify-between gap-3">

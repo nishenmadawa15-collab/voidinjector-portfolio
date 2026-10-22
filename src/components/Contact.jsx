@@ -101,6 +101,7 @@ export default function Contact() {
                   {personalInfo.email}
                 </p>
               </a>
+{personalInfo.phone && (
               <a
                 href={`tel:${personalInfo.phone.replace(/[^\d+]/g, '')}`}
                 className="rounded-xl border border-[#0a6b32] bg-[#07140c]/80 p-4 transition-all hover:border-[#00FF55]/45"
@@ -109,6 +110,7 @@ export default function Contact() {
                 <p className="font-mono text-[0.65rem] text-[#00D9FF]">PHONE</p>
                 <p className="mt-1 font-body text-sm text-[#E8FFF0]">{personalInfo.phone}</p>
               </a>
+              )}
               <div className="rounded-xl border border-[#0a6b32] bg-[#07140c]/80 p-4">
                 <MapPin className="mb-2 h-5 w-5 text-[#00FF55]" />
                 <p className="font-mono text-[0.65rem] text-[#00D9FF]">LOCATION</p>

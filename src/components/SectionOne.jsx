@@ -87,7 +87,7 @@ export default function SectionOne() {
             <div data-hero-badge className="badge-left-accent mb-5 inline-flex items-center gap-2">
               <Shield size={12} className="text-[#00FF55]" />
               <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#00FF55]">
-                Secured 100+ Assessments
+                ANIMUS 1.0 CTF · 5th Place Nationally
               </span>
             </div>
 
